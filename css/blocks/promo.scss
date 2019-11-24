@@ -1,0 +1,45 @@
+.promo {
+  background-image: url("../img/bg/main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.promo__container {
+  height: 100%;
+  display: flex;
+}
+
+.promo__content {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-bottom: 63px;
+}
+
+.promo__title {
+  margin-left: 12px;
+  padding-top: 75px;
+}
+
+.promo__subtitle {
+  @include lifehack();
+  margin-top: 20px;
+  font-size: 65px;
+  color: $white;
+  line-height: 1;
+}
+
+.promo__scroll-btn {
+  width: 29px;
+  height: 15px;
+  background-image: url("../img/icons/arrow-scroll.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}

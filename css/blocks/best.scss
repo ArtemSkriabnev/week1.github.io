@@ -1,0 +1,67 @@
+.best {
+  background-image: url("../img/bg/best.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.best__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .best__content {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .best__title {
+//   margin-left: 20px;
+// }
+
+.best__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+}
+
+.best__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 20px);
+  margin-top: 0px;
+  margin-bottom: 18px;
+  margin-right: 10px;
+}
+
+.best__logo{
+  min-height: 97px;
+  margin-bottom: 18px;
+}
+
+.best__item-title {
+  @include lifehack();
+  font-size: 24px;
+  letter-spacing: -0.6px;
+  line-height: 28.14px;
+  color: $black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.best__desc {
+  @include ubuntu();
+  color: $black;
+  font-size: 14px;
+  line-height: 24.02px;
+  text-align: center;
+}
+
+
+
+
