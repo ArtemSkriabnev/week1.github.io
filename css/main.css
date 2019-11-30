@@ -556,7 +556,12 @@ button {
   text-decoration: none;
   color: #fff;
   font-size: 13px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .nav__link:hover {
+    color: #e45028; }
 
 .btn {
   padding: 11px 15px;
@@ -565,10 +570,15 @@ button {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  font-size: 13px; }
+  font-size: 13px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .btn:hover {
+    background-color: #f9b43b; }
 
 .promo {
-  background-image: url("../img/bg/main.png");
+  background-image: url("../img/bg/main.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -723,6 +733,10 @@ button {
 .reviews__name {
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   font-size: 14px; }
+
+.reviews__text {
+  overflow: hidden;
+  max-height: 80%; }
 
 .fixed-menu {
   position: fixed;

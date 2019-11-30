@@ -6,4 +6,9 @@
   text-decoration: none;
   color: $white;
   font-size: 13px;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: $yellow;
+  }
 }

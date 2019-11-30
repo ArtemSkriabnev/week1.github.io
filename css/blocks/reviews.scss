@@ -41,5 +41,10 @@
 .reviews__name {
   @include gagalin();
   font-size: 14px;
+
   }
 
+  .reviews__text {
+    overflow: hidden;
+    max-height: 80%;
+  }
