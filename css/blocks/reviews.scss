@@ -15,6 +15,10 @@
       opacity: 1;
     }
   }
+  @include tablets {
+    flex-basis: 50%;
+    height: 25%;
+	}
 }
 
 .reviews__photo {
@@ -47,4 +51,8 @@
   .reviews__text {
     overflow: hidden;
     max-height: 80%;
+
+    @include phones {
+      display: none;
+    }
   }

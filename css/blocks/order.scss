@@ -1,0 +1,178 @@
+.order {
+  background-image: url("../img/bg/order.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+.order__form-base {
+  display: flex;
+  width: 90%;
+
+  @include tablets {
+		flex-direction: column; 
+	}
+}
+
+.order__form-col {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+}
+
+.form__row {
+  display: flex;
+
+  &-centered {
+    @include phones {
+      // display: flex;
+      justify-content: center;
+    }
+  }
+
+  
+}
+
+.form__label {
+  width: 100%;
+  margin-left: 10px;
+
+  &-ghost {
+    @include phones {
+      display: none;
+    }
+  }
+
+  &-centered {
+    @include phones {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+}
+
+.form__label__title {
+  color: $white;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  padding-bottom: 7px;
+  }
+
+.form__input {
+  border-radius: 4px;
+  border: 0.2px solid transparent;
+   
+    padding: 11px 21px;
+    margin-bottom: 20px;
+    outline: none;
+    width: 100%;
+}
+
+.form__textarea {
+  resize: none;
+  min-height: 110px; 
+
+}
+
+.form__label-radio {
+  display: flex;
+}
+
+
+
+.form__question {
+  display: flex;
+  margin-right: 10px;
+}
+
+.form__input-radio {
+  display: none;
+}
+
+.form__radio {
+  width: rem(16px);
+  height: rem(16px);
+  border-radius: 50%;
+  background: $white;
+  // @include inlineblock(middle);
+  position: relative;
+  margin-right: 10px;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(0px);
+    height: rem(0px);
+    border-radius: 50%;
+    background: $red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+  }
+}
+
+.form__question input:checked {
+  &+.form__radio {
+    &:after {
+      width: rem(8px);
+      height: rem(8px);
+    }
+  }
+}
+
+.form__question-call{
+  display: flex;
+}
+
+.form__input-checkbox {
+  display: none; 
+}
+
+.form__checkbox {
+  width: rem(16px);
+  height: rem(16px);
+  background: $white;
+  position: relative;
+  margin-right: 10px; 
+  &:after {
+    content: "";
+    display: none;
+    width: 8px;
+    height: 4px;
+    position: absolute;
+    border-radius: 2px;
+    left: 2px;
+    top: 3px;
+    border-left: 4px solid $orange;
+    border-bottom: 4px solid $orange;
+    transform: rotate(-45deg);
+  }
+}
+
+.form__question-call input:checked {
+  &+.form__checkbox {
+    &:after {
+      display: block;
+      // width: rem(8px);
+      // height: rem(8px);
+    }
+  }
+}
+
+.form__button {
+  margin-left: 10px;
+}
+
+.form__button--clear {
+  padding: 11px 15px; 
+  text-decoration: none;
+  color: $white;
+  font-size: 13px;
+}

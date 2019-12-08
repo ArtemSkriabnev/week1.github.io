@@ -19,11 +19,19 @@ body {
   min-width: 940px + 20px;
   min-height: 100%;
   overflow: hidden;
+
+  @include tablets {
+    min-width: 100%;
+  }
 }
 
 .container {
   width: 940px;
   margin: 0 auto;
+
+  @include tablets {
+    width: 100%;
+  } 
 }
 
 .section {
@@ -48,6 +56,14 @@ body {
     &--white {
       color: $white;
     }
+
+    &--yellow {
+      color: $yellow;
+    }
+
+    // &--yellow {
+    //   color: $yellow;
+    // }
   }
 
   &--centered {

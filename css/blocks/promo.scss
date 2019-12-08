@@ -16,11 +16,22 @@
   align-items: center;
   padding-left: 20px;
   padding-bottom: 63px;
+
+  @include tablets {
+		flex-direction: column;
+	}
+
 }
 
 .promo__title {
   margin-left: 12px;
   padding-top: 75px;
+
+  @include tablets {
+    padding-top: 10px;
+    text-align: center;
+    width: 80%;
+	}
 }
 
 .promo__subtitle {
