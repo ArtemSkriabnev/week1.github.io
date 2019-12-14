@@ -23,13 +23,14 @@
 			color: $yellow; 
 		}
 		.menu-acco__content {
-			width: 300px;
+			display: block;
+			max-width: rem(300px);
 		}
 	}
 }
 
 .menu-acco__trigger {
-	width: 80px;
+	width: rem(80px);
 	display: block;
 	height: 100%;
 	float: left;
@@ -39,9 +40,9 @@
 	position: relative;
 	// background-color:blue;
   
-  // @include phones {
-  //   width: rem(50px);
-  // }
+  @include phones {
+    width: rem(50px);
+  }
 }
 
 .menu-acco__trigger:before{
@@ -61,7 +62,7 @@
 // }
 
 .menu-acco__trigger-text {
-	font-size: 40px;
+	font-size: rem(40px);
 	color: $white;
 	@include gagalin;
 	text-align: center;
@@ -71,27 +72,29 @@
   transform-origin: 0 0;
   left: 50%;
   top: 100%;
-	margin-top: -20px;
+	margin-top: rem(-20px);
+
 	// background: rgba(#2f3234, .93);
 
-  // @include phones {
-  //   font-size: rem(26px);
-  // }
+  @include phones {
+    font-size: rem(26px);
+  }
 }
 
 .menu-acco__content {
+	display: none;
 	height: 100%;
 	// float: left;
 	background: rgba(#2f3234, .93);
-	width: 0;
+	// width: 0;
 	overflow: hidden;
 }
 
 .menu-acco__text {
 	@include ubuntu(light);
-	font-size: 14px;
+	font-size: rem(14px);
 	color: #fff;
-	padding: 60px 30px;
+	padding: rem(60px) rem(30px);
 	width: 100%;
   line-height: 1.8;
   // display: none;

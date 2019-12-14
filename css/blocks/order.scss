@@ -7,10 +7,14 @@
   background-color: rgba(0, 0, 0, 0.9);
 
 }
-
+.order__form {
+  display: flex;
+  justify-content: center;
+}
 .order__form-base {
   display: flex;
   width: 90%;
+  // justify-content: space-between;
 
   @include tablets {
 		flex-direction: column; 
@@ -38,7 +42,13 @@
 
 .form__label {
   width: 100%;
-  margin-left: 10px;
+  margin-left: rem(10px);
+
+  @include phones {
+  &:first-child {
+    margin-left: 0;
+  }
+}
 
   &-ghost {
     @include phones {
@@ -59,24 +69,29 @@
 .form__label__title {
   color: $white;
   font-family: Ubuntu;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  padding-bottom: 7px;
+  padding-bottom: rem(7px);
   }
 
 .form__input {
-  border-radius: 4px;
-  border: 0.2px solid transparent;
+  border-radius: rem(4px);
+  border: rem(1px) solid transparent;
    
-    padding: 11px 21px;
-    margin-bottom: 20px;
-    outline: none;
-    width: 100%;
+  padding: rem(11px) rem(21px);
+  margin-bottom: rem(20px);
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border-color: $orange;
+  }
+
 }
 
 .form__textarea {
   resize: none;
-  min-height: 110px; 
+  min-height: rem(110px); 
 
 }
 
@@ -88,7 +103,7 @@
 
 .form__question {
   display: flex;
-  margin-right: 10px;
+  margin-right: rem(10px);
 }
 
 .form__input-radio {
@@ -102,7 +117,7 @@
   background: $white;
   // @include inlineblock(middle);
   position: relative;
-  margin-right: 10px;
+  margin-right: rem(10px);
   &:after {
     content: "";
     display: block;
@@ -140,18 +155,18 @@
   height: rem(16px);
   background: $white;
   position: relative;
-  margin-right: 10px; 
+  margin-right: rem(10px); 
   &:after {
     content: "";
     display: none;
-    width: 8px;
-    height: 4px;
+    width: rem(8px);
+    height: rem(4px);
     position: absolute;
-    border-radius: 2px;
-    left: 2px;
-    top: 3px;
-    border-left: 4px solid $orange;
-    border-bottom: 4px solid $orange;
+    border-radius: rem(2px);
+    left: rem(2px);
+    top: rem(3px);
+    border-left: rem(4px) solid $orange;
+    border-bottom: rem(4px) solid $orange;
     transform: rotate(-45deg);
   }
 }
@@ -167,12 +182,12 @@
 }
 
 .form__button {
-  margin-left: 10px;
+  margin-left: rem(10px);
 }
 
 .form__button--clear {
-  padding: 11px 15px; 
+  padding: rem(11px) rem(15px); 
   text-decoration: none;
   color: $white;
-  font-size: 13px;
+  font-size: rem(13px);
 }

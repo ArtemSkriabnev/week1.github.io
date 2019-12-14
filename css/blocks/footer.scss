@@ -6,7 +6,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-  padding: 10px 10px;
+  padding: rem(10px) rem(10px);
 }
 
 .footer__container {
@@ -21,7 +21,7 @@
 
 .footer__col {
 	width: 50%;
-	margin-bottom: 15px;
+	margin-bottom: rem(15px);
 	
 	@include phones {
 		width: 100%;
@@ -37,14 +37,14 @@
 
 .footer__address {
 	color: $white;
-	font-size: 14px;
+	font-size: rem(14px);
 }
 
 .footer__phone {
 	color: $red;
 	@include ubuntu(bold);
 	text-decoration: none;
-	font-size: 14px;
+	font-size: rem(14px);
 }
 
 .footer__col_right {

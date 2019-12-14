@@ -6,7 +6,7 @@
 .nav__item {
   display: flex;
   align-items: center;
-  margin-right: 18px;
+  margin-right: rem(18px);
  
   @include tablets {
 		display: none;
@@ -14,12 +14,12 @@
 
   &:after {
     content: "";
-    width: 5px;
-    height: 5px;
+    width: rem(5px);
+    height: rem(5px);
     background-color: $white;
     border-radius: 50%;
     display: block;
-    margin-left: 15px;
+    margin-left: rem(15px);
   }
 
   &:nth-last-child(3) {
@@ -32,7 +32,7 @@
 .nav__link {
   text-decoration: none;
   color: $white; 
-  font-size: 13px;
+  font-size: rem(13px);
   text-transform: uppercase;
   transition: 0.5s;
   white-space: nowrap;
@@ -44,8 +44,8 @@
 }
 
 .nav__order {
-margin-left: 15px;
-margin-right: 15px;
+margin-left: rem(15px);
+margin-right: rem(15px);
 }
 
 .nav__ham-menu {
@@ -58,9 +58,9 @@ margin-right: 15px;
 }
 
 .nav__menu-line {
-  width: 24px;
-  height: 3px;
+  width: rem(24px);
+  height: rem(3px);
   background-color: $white;
   background-repeat: 30%;
-  margin-bottom: 5px;
+  margin-bottom: rem(5px);
 }

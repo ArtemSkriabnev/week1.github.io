@@ -1,9 +1,9 @@
 .hamburger-menu-link {
 	vertical-align: middle;
 	position: relative;
-	height: 22px;
+	height: rem(22px);
 	align-items: center;
-	margin-left: 30px; 
+	margin-left: rem(30px); 
 	display: block;
 
 	// @include tablets {
@@ -14,9 +14,9 @@
 .hamburger-menu-link__bars {
 	&, &:before, &:after {
 		background: #fff;
-		width: 24px;
-		height: 5px;
-		border-radius: 3px;
+		width: rem(24px);
+		height: rem(5px);
+		border-radius: rem(3px);
 	}
 
 	&:before, &:after {

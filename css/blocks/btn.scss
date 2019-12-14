@@ -1,11 +1,11 @@
 .btn {
-  padding: 11px 15px;
-  border-radius: 5px;
+  padding: rem(11px) rem(15px);
+  border-radius: rem(5px);
   background-color: $orange;
   text-transform: uppercase;
   text-decoration: none;
   color: $white;
-  font-size: 13px;
+  font-size: rem(13px);
   transition: 0.5s;
 
   &:hover {
