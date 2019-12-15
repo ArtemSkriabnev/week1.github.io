@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Сочные бургеры</title>
+  <link rel="stylesheet" href="./css/jquery.bxslider.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -150,44 +151,79 @@
       </div>
     </section>
 
-    <section class="section slider">
+    <section class="section burgers">
       <div class="container slider__container">
-        <div class="slider__scroll">
-            <a href="#" class="slider__btn arrow--left" aria-label="Прокрутка влево"></a>
+        <div class="slider__scroll" id="left">
+          <div class="slider__btn arrow--left"></div>
         </div>
-        <div class="slider__menu">
-          <div class="slider__photo">
-              <img class="slider__img" src="./img/content/dark_beef.png" alt="Фотография гамбургера">
-            <div class="slider__consist">
-                <svg class="slider__svg-burger">
-                    <use xlink:href="./img/icons/slider.svg#burger"></use>
-                </svg>
-                <div class="slider__consist-name">Состав</div>
-            </div>
-            <div class="slider__energy">
-              <div class="slider__energy-value">1200</div>
-              <div class="slider__energy-unit">ккал</div>
-                <!-- <svg class="slider__svg-burger">
-                    <use xlink:href="./img/icons/slider.svg#kkal"></use>
-                </svg> -->
-            </div>
-          </div>
-          <div class="slider__desc">
-            <div class="title title--color--white slider__title">Dark Beer Burger</div>
-            <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
 
+        <div class="slider">
+          <div class="slider__item">
+            <div class="slider__photo">
+                <img class="slider__img" src="./img/content/dark_beef.png" alt="Фотография гамбургера">
+              <div class="slider__consist">
+                  <svg class="slider__svg-burger">
+                      <use xlink:href="./img/icons/slider.svg#burger"></use>
+                  </svg>
+                  <div class="slider__consist-name">Состав</div>
+              </div>
+              <div class="slider__energy">
+                <div class="slider__energy-value">1200</div>
+                <div class="slider__energy-unit">ккал</div>
+                  <!-- <svg class="slider__svg-burger">
+                      <use xlink:href="./img/icons/slider.svg#kkal"></use>
+                  </svg> -->
+              </div>
             </div>
-            <div class="slider__price">
-              <div class="slider__price-value">500</div>
-              <div class="slider__price-currency">рублей</div>
-                <button type="submit" class="btn slider__button">Заказать</button>
+            <div class="slider__desc">
+              <div class="title title--color--white slider__title">Dark Beer Burger</div>
+              <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+  
+              </div>
+              <div class="slider__price">
+                <div class="slider__price-value">500</div>
+                <div class="slider__price-currency">рублей</div>
+                  <button type="submit" class="btn slider__button">Заказать</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class="slider__photo">
+                <img class="slider__img" src="./img/content/chiken_burger.png" alt="Фотография гамбургера">
+              <div class="slider__consist">
+                  <svg class="slider__svg-burger">
+                      <use xlink:href="./img/icons/slider.svg#burger"></use>
+                  </svg>
+                  <div class="slider__consist-name">Состав</div>
+              </div>
+              <div class="slider__energy">
+                <div class="slider__energy-value">1200</div>
+                <div class="slider__energy-unit">ккал</div>
+                  <!-- <svg class="slider__svg-burger">
+                      <use xlink:href="./img/icons/slider.svg#kkal"></use>
+                  </svg> -->
+              </div>
+            </div>
+            <div class="slider__desc">
+              <div class="title title--color--white slider__title">Chicken burger</div>
+              <div class="slider__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+  
+              </div>
+              <div class="slider__price">
+                <div class="slider__price-value">500</div>
+                <div class="slider__price-currency">рублей</div>
+                  <button type="submit" class="btn slider__button">Заказать</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="slider__scroll">
-            <a href="#" class="slider__btn arrow--right" aria-label="Прокрутка вправо"></a>
+        
+        
+        <div class="slider__scroll" id="right">
+            <div class="slider__btn arrow--right"></div>
         </div>
       </div>
+      
 
     </section>
 
@@ -206,7 +242,7 @@
                   </div>
                 </div>
               </li>
-              <li class="team-acco__item--active"><a class="team-acco__trigger" href="#">ричард джеймс</a>
+              <li class="team-acco__item"><a class="team-acco__trigger" href="#">ричард джеймс</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <div class="team-acco__img" style="background-image: url('./img/content/teammate.png')"></div>
@@ -249,10 +285,11 @@
     <section class="section menu">
       <div class="title title--color--white menu__title">Меню</div>
       <ul class="menu-acco">
-        <li class="menu-acco__item--active"><a class="menu-acco__trigger" href="#" style="background-image: url('./img/bg/menu/meat.png')">
+        <li class="menu-acco__item"><a class="menu-acco__trigger" href="#" style="background-image: url('./img/bg/menu/meat.png')">
             <div class="menu-acco__trigger-text">Для мясоедов</div></a>
           <div class="menu-acco__content">
             <div class="menu-acco__text">
+              Мясоедовский текст
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
             </div>
@@ -262,6 +299,7 @@
             <div class="menu-acco__trigger-text">Вегетарианское</div></a>
           <div class="menu-acco__content">
             <div class="menu-acco__text">
+              Вегетарианский текст
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
             </div>
@@ -271,6 +309,7 @@
             <div class="menu-acco__trigger-text">Диетическое</div></a>
           <div class="menu-acco__content">
             <div class="menu-acco__text">
+              Диетический текст
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
               Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
             </div>
@@ -290,32 +329,36 @@
               <div class="reviews__text">
                 <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
             <img class="reviews__photo" src="./img/reviews/2.png" alt="Фото поедателя">
             <div class="reviews__hover">
-              <div class="reviews__name">Константин Спилбер г</div>
-              <div class="reviews__text">
-                Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+              <div class="reviews__name">Иван Петров</div>
+              <div class="reviews__text"> 
+                <p>
+
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
-                
+                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                  
+
+                </p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
             <img class="reviews__photo" src="./img/reviews/3.png" alt="Фото поедателя">
             <div class="reviews__hover">
-              <div class="reviews__name">Константин Спилберг</div>
+              <div class="reviews__name">Вася Рогов</div>
               <div class="reviews__text">
-                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+                <p>Парам-пам-пам. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                 </p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
@@ -325,7 +368,7 @@
               <div class="reviews__text">
                 <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
@@ -335,7 +378,7 @@
               <div class="reviews__text">
                 <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
@@ -345,7 +388,7 @@
               <div class="reviews__text">
                 <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
@@ -355,7 +398,7 @@
               <div class="reviews__text">
                 <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
           <li class="reviews__item">
@@ -365,10 +408,21 @@
               <div class="reviews__text">
                 <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
               </div>
-              <button class="btn" type="button">Подробнее</button>
+              <button class="btn js-reviews-modal" type="button">Подробнее</button>
             </div>
           </li>
         </ul>
+        <div class="reviews__popup overlay">
+          <div class="overlay__container">
+            <div class="overlay__content">
+              <div class="overlay__close js-close">
+                <div class="overlay__close-img"></div>
+              </div>
+              <div class="overlay__title"></div>
+              <div class="overlay__text"></div>
+            </div>
+          </div>
+        </div>
       </section>
 
     <section class="section order">
@@ -565,7 +619,13 @@
         </div>
 
   </div>
-  <script defer src="./js/main.js"></script>
+</script><script defer src="./js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/jquery.bxslider.js"></script>
+<!-- <script src="./css/jquery.bxslider.css"></script> -->
+  </script><script defer src="./js/slider.js"></script>
+  
+
 
 </body>
 

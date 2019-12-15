@@ -1,4 +1,4 @@
-.slider {
+.burgers{
   background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
 
 }
@@ -34,12 +34,13 @@
   }
 
   .arrow--right {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg); 
   }
 
-  .slider__menu {
+  .slider__item {
     display: flex;
     flex-direction: row;
+    // opacity: 0.5;
 
     @include tablets {
       flex-direction: column;
