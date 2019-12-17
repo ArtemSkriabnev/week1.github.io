@@ -135,3 +135,68 @@ MenuList.forEach(el =>
   })
 );
 // меню аккордеон КОНЕЦ
+
+// Форма НАЧАЛО
+
+const orderForm = document.querySelector('#OrderForm');
+const sednButton = document.querySelector('#sendButton');
+
+console.log(sednButton);
+
+sednButton.addEventListener('click', function(event) {
+  event.preventDefault();
+
+  // let formData = new FormData(orderForm);
+  // console.log(formData);
+  // console.log(orderForm.elements.FirstName.value);
+  function validateForm (form) {
+    let valid = true;
+
+    if ((!form.elements.name.checkValidity()) || 
+    (!form.elements.phone.checkValidity()) ||
+    (!form.elements.comment.checkValidity())) {
+      valid = false;
+    }
+
+    
+    // console.log(!form.elements.name.checkValidity());
+    // if (!validateField(form.elements.FirstName)) {
+    //   valid = false;
+    // }
+
+    return valid;
+  }
+
+  // function validateField(field) {
+  //   console.log(field.checkValidity())   ;    
+  //   return field.checkValidity();
+  // }
+  console.log(validateForm(orderForm));
+  if (validateForm(orderForm)) {
+    // const data = {
+    //   name: orderForm.elements.name.value,
+    //   phone: orderForm.elements.phone.value,
+    //   comment: orderForm.elements.comment.value,
+    //   to: 'testmail@mai.ru'
+    // }
+    var formData = new FormData(orderForm);
+    formData.append('to','mail@mail.com');
+    // console.log(data);
+    const request = new XMLHttpRequest();
+    request.responseType='json';
+    request.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    request.send(formData);
+    request.addEventListener('load', ()=> {
+      console.log(request.response);
+    })
+  }
+
+  // console.log(data);
+  // validateForm(orderForm);
+
+
+})
+
+
+
+// Форма КОНЕЦ

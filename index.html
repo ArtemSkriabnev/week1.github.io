@@ -429,16 +429,16 @@
       <div class="container">
         <div class="title title--centered">Закажите доставку</div>
         <div class="order__form">
-          <form action="" class="order__form-base">
+          <form class="order__form-base" id="OrderForm">
             <div class="order__form-col">
               <div class="form__row"> <!--name phone-->
                 <label class="form__label">
                   <div class="form__label__title">Имя</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="name" required>
                 </label>
                 <label class="form__label">
                     <div class="form__label__title">Телефон</div>
-                    <input type="text" class="form__input">
+                    <input type="text" class="form__input" name="phone">
                   </label>
               </div>
               <div class="form__row"> <!--street-->
@@ -472,7 +472,7 @@
               <div class="form__row">
                   <label class="form__label">
                       <div class="form__label__title">Комментарий</div>
-                      <input type="text" class="form__input form__textarea">
+                      <input type="text" class="form__input form__textarea" name="comment" required> 
                     </label>
 
               </div>
@@ -502,7 +502,7 @@
               </div>
 
               <div class="form__row form__row-centered">
-                  <button type="submit" class="btn form__button">Заказать</button>
+                  <button type="submit" class="btn form__button" id="sendButton">Заказать</button>
                   <button type="reset" class="form__button--clear">Очистить</button>
                   <!-- <a href="#" class="btn form__button">Заказать</a> -->
                   <!-- <a href="#" class="form__button--clear">Очистить</a> -->
