@@ -3,12 +3,6 @@
   // opacity: 0.5; 
 }
 
-.order__popup {
-  display: none;
-  // opacity: 0.5; 
-}
-
-
 .overlay__container {
   display: flex;
   justify-content: center;
@@ -81,8 +75,6 @@
   color: $black;
   text-align: center;
   margin-bottom: 5px;
-  margin-right: 25px;
-  margin-left: 10px;
 }
 
 .overlay__text {

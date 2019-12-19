@@ -25,7 +25,7 @@
                 <a href="#" class="nav__link">Бургеры</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Команда</a>
+                <a href="#section3" class="nav__link">Команда</a>
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Меню</a>
@@ -87,7 +87,7 @@
       </div>
     </section>
   
-    <section class="section best">
+    <section class="section best" id="section-best">
       <div class="container best__container">
         <div class="best__content">
           <h1 class="title title--color--black title--centered best__title">
@@ -151,7 +151,7 @@
       </div>
     </section>
 
-    <section class="section burgers">
+    <section class="section burgers" id="section-burgers">
       <div class="container slider__container">
         <div class="slider__scroll" id="left">
           <div class="slider__btn arrow--left"></div>
@@ -227,7 +227,7 @@
 
     </section>
 
-    <section class="section team">
+    <section class="section team" id="section-team">
       <div class="team__section">
           <div class="title title--color--yellow title--centered team__title">Команда</div>
           <ul class="team-acco">
@@ -282,7 +282,7 @@
 
     </section>
 
-    <section class="section menu">
+    <section class="section menu" id="section-menu"> 
       <div class="title title--color--white menu__title">Меню</div>
       <ul class="menu-acco">
         <li class="menu-acco__item"><a class="menu-acco__trigger" href="#" style="background-image: url('./img/bg/menu/meat.png')">
@@ -320,7 +320,7 @@
 
 
   
-    <section class="section reviews">
+    <section class="section reviews" id="section-reviews">
         <ul class="reviews__list">
           <li class="reviews__item">
             <img class="reviews__photo" src="./img/reviews/1.png" alt="Фото поедателя">
@@ -425,7 +425,7 @@
         </div>
       </section>
 
-    <section class="section order">
+    <section class="section order" id="section-order" >
       <div class="container">
         <div class="title title--centered">Закажите доставку</div>
         <div class="order__form">
@@ -518,9 +518,21 @@
         </div>
       </div>
 
+      <div class="order__popup overlay">
+        <div class="overlay__container">
+          <div class="overlay__content">
+            <div class="overlay__close js-close">
+              <div class="overlay__close-img"></div>
+            </div>
+            <div class="overlay__title"></div>
+            <div class="overlay__text"></div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-      <section class="section map">
+      <section class="section map" id="section-contacts">
         <!-- <div class="yandex-map" id="map"></div> -->
         <footer class="footer">
           <div class="container footer__container">
@@ -589,25 +601,25 @@
 
       <ul class="fullscreen-menu-nav__list">
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">О нас</a>
+            <a href="#section-best" class="fullscreen-menu-nav__link">О нас</a>
           </li>
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">Бургеры</a>
+            <a href="#section-burgers" class="fullscreen-menu-nav__link">Бургеры</a>
           </li>
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">Команда</a>
+            <a href="#sectiont-team" class="fullscreen-menu-nav__link">Команда</a>
           </li>
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">Меню</a>
+            <a href="#section-menu" class="fullscreen-menu-nav__link">Меню</a>
           </li>
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">Отзывы</a>
+            <a href="#section-reviews" class="fullscreen-menu-nav__link">Отзывы</a>
           </li>
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">Как мы работаем </a>
+            <a href="#section-order" class="fullscreen-menu-nav__link">Как мы работаем </a>
           </li>
           <li class="fullscreen-menu-nav__item">
-            <a href="#" class="fullscreen-menu-nav__link">Контакты</a>
+            <a href="#section-contacts" class="fullscreen-menu-nav__link">Контакты</a>
           </li>
         </ul>
 

@@ -136,6 +136,29 @@ MenuList.forEach(el =>
 );
 // меню аккордеон КОНЕЦ
 
+function orderPopup (message) {
+  const popup=document.querySelector('.order__popup');
+  const popupName=popup.querySelector('.overlay__title');
+  const popupText = popup.querySelector('.overlay__text');
+  const popupClose = popup.querySelector('.js-close');
+
+  popup.style.display = 'flex';
+  popupName.innerText = "Сообщение";
+  popupText.innerText = message;
+
+
+  popupClose.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+  })
+
+  popup.addEventListener('click', (e)=>{
+    if(e.target.classList.contains('overlay__container')) {
+      popupClose.click();
+    }
+  })
+
+}
+
 // Форма НАЧАЛО
 
 const orderForm = document.querySelector('#OrderForm');
@@ -146,9 +169,7 @@ console.log(sednButton);
 sednButton.addEventListener('click', function(event) {
   event.preventDefault();
 
-  // let formData = new FormData(orderForm);
-  // console.log(formData);
-  // console.log(orderForm.elements.FirstName.value);
+  
   function validateForm (form) {
     let valid = true;
 
@@ -157,12 +178,6 @@ sednButton.addEventListener('click', function(event) {
     (!form.elements.comment.checkValidity())) {
       valid = false;
     }
-
-    
-    // console.log(!form.elements.name.checkValidity());
-    // if (!validateField(form.elements.FirstName)) {
-    //   valid = false;
-    // }
 
     return valid;
   }
@@ -173,22 +188,17 @@ sednButton.addEventListener('click', function(event) {
   // }
   console.log(validateForm(orderForm));
   if (validateForm(orderForm)) {
-    // const data = {
-    //   name: orderForm.elements.name.value,
-    //   phone: orderForm.elements.phone.value,
-    //   comment: orderForm.elements.comment.value,
-    //   to: 'testmail@mai.ru'
-    // }
     var formData = new FormData(orderForm);
     formData.append('to','mail@mail.com');
-    // console.log(data);
     const request = new XMLHttpRequest();
     request.responseType='json';
     request.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     request.send(formData);
     request.addEventListener('load', ()=> {
-      console.log(request.response);
-    })
+      orderPopup(request.response.message);
+    })  
+  } else {
+    orderPopup('Не все необходимые поля заполнены');
   }
 
   // console.log(data);

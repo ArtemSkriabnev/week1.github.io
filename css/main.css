@@ -1711,6 +1711,9 @@ button {
 .reviews__popup {
   display: none; }
 
+.order__popup {
+  display: none; }
+
 .overlay__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1780,7 +1783,9 @@ button {
   font-size: 0.875rem;
   color: #2f3234;
   text-align: center;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  margin-right: 25px;
+  margin-left: 10px; }
 
 .overlay__text {
   font-family: 'Ubuntu', Helvetica, sans-serif;
