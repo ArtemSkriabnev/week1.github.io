@@ -1,3 +1,6 @@
+const footer = document.querySelector(".footer");
+console.log(footer);
+
 // фулскрин мею НАЧАЛО
 
 const hamburger = document.querySelector(".nav__ham-menu");
@@ -207,6 +210,62 @@ sednButton.addEventListener('click', function(event) {
 
 })
 
-
-
 // Форма КОНЕЦ
+
+ymaps.ready(init);
+
+var placemarks = [
+  {
+      latitude: 59.97,
+      longitude: 30.31,
+      hintContent: 'ул. Литераторов, д. 19',
+      balloonContent: 'Самые вкусные бургеры у нас!'
+  },
+  {
+      latitude: 59.94,
+      longitude: 30.25,
+      hintContent: 'ул. Литераторов, д. 19',
+      balloonContent: 'Самые вкусные бургеры у нас!'
+  },
+  {
+      latitude: 59.93,
+      longitude: 30.34,
+      hintContent: 'наб. реки Фонтанки, д. 56',
+      balloonContent: 'Самые вкусные бургеры у нас!'
+  }
+],
+  geoObjects= [];
+
+    function init(){
+        // Создание карты.
+        var map = new ymaps.Map("map", {
+            // Координаты центра карты.            
+            center: [59.94, 30.32],
+            // Уровень масштабирования. 
+            zoom: 12,
+            controls: ['zoomControl'],
+            behaviors: ['drag']
+        });
+    
+        for (var i = 0; i < placemarks.length; i++) {
+          geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+          {
+              hintContent: placemarks[i].hintContent,
+              balloonContent: placemarks[i].balloonContent
+          },
+          {
+              iconLayout: 'default#image',
+              iconImageHref: './img/icons/map-marker.svg',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-23, -57],
+          });
+          // map.geoObjects.add(placemark);
+  }
+
+  var clusterer = new ymaps.Clusterer();
+
+  map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+
+        
+  }

@@ -1115,19 +1115,14 @@ button {
   width: 100%;
   line-height: 1.8; }
 
-.map {
-  background-image: url("../img/bg/map.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  position: relative; }
+.map__yandex {
+  width: 100%;
+  -webkit-box-flex: 3;
+  -ms-flex-positive: 3;
+  flex-grow: 3; }
 
 .footer {
   background-color: #2f3234;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 0.625rem 0.625rem; }
 
 .footer__container {
@@ -1794,3 +1789,10 @@ button {
   color: #2f3234;
   text-align: center;
   margin-bottom: 5px; }
+
+.video {
+  background-image: url("../img/bg/wework.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }

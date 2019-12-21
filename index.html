@@ -425,6 +425,25 @@
         </div>
       </section>
 
+    <section class="section video" id="section-video">
+      <div class="container">
+        <div class="title title--color--black title--centered">Как мы работаем </div>
+        <div>
+          <video src="./video/videoplayback.mp4" width="480" height="270" poster="./img/content/burger.png" controls >
+          <!-- <video id="myvideo" width="480" height="270" poster="./img/content/burger.png" >
+              <source src="./video/videoplayback.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+          </video> -->
+        </div>
+        <!-- <div id="controls">
+          <span id="playpause" class="paused" >Play</span>
+        </div> -->
+
+
+
+      </div>
+
+    </section>
+
     <section class="section order" id="section-order" >
       <div class="container">
         <div class="title title--centered">Закажите доставку</div>
@@ -532,7 +551,10 @@
 
     </section>
 
-      <section class="section map" id="section-contacts">
+      <section class="section" id="section-contacts">
+               <!-- <div id="map" style="width: 600px; height: 400px"></div> -->
+        <div id="map" class="map__yandex"></div>
+
         <!-- <div class="yandex-map" id="map"></div> -->
         <footer class="footer">
           <div class="container footer__container">
@@ -633,6 +655,9 @@
   </div>
 </script><script defer src="./js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=8318081a-3c84-4738-8a77-7cd67034ad59&lang=ru_RU" type="text/javascript">
+</script>
+
 <script src="./js/jquery.bxslider.js"></script>
 <!-- <script src="./css/jquery.bxslider.css"></script> -->
   </script><script defer src="./js/slider.js"></script>
