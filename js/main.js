@@ -1,5 +1,3 @@
-const footer = document.querySelector(".footer");
-console.log(footer);
 
 // фулскрин мею НАЧАЛО
 
@@ -248,6 +246,7 @@ var placemarks = [
         });
     
         for (var i = 0; i < placemarks.length; i++) {
+          // console.log("hi");
           geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
           {
               hintContent: placemarks[i].hintContent,
@@ -269,3 +268,6 @@ var placemarks = [
 
         
   }
+
+
+  // $(".main").onepage_scroll();

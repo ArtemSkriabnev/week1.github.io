@@ -519,7 +519,8 @@ button {
   position: absolute;
   width: 100%;
   padding-top: 0.75rem;
-  z-index: 1; }
+  z-index: 1;
+  top: 0; }
 
 .header__container {
   display: -webkit-box;
@@ -1114,6 +1115,16 @@ button {
   padding: 3.75rem 1.875rem;
   width: 100%;
   line-height: 1.8; }
+
+.map__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .map__yandex {
   width: 100%;
