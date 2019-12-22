@@ -2,7 +2,7 @@ new fullpage('#fullpage', {
   //Navigation
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'secondPage'],
+	anchors:['','section-best', 'section-burgers', 'section-team', 'section-menu', 'section-reviews', 'section-wework', 'section-order', 'section-contacts'],
 	navigation: true,
 	navigationPosition: 'right',
 	navigationTooltips: [/*'firstSlide', 'secondSlide'*/],
@@ -11,7 +11,36 @@ new fullpage('#fullpage', {
 	slidesNavPosition: 'bottom',
 	//options here
 	autoScrolling:true,
-	scrollHorizontally: false
+	scrollHorizontally: false,
+
+	//Scrolling
+	css3: true,
+	scrollingSpeed: 700,
+	autoScrolling: true,
+	fitToSection: true,
+	fitToSectionDelay: 1000,
+	scrollBar: false,
+	easing: 'easeInOutCubic',
+	easingcss3: 'ease',
+	loopBottom: false,
+	loopTop: false,
+	loopHorizontal: true,
+	continuousVertical: true,
+	continuousHorizontal: false,
+	scrollHorizontally: false,
+	interlockedSlides: false,
+	dragAndMove: false,
+	offsetSections: false,
+	resetSliders: false,
+	fadingEffect: false,
+	normalScrollElements: '#element1, .element2',
+	scrollOverflow: false,
+	scrollOverflowReset: false,
+	scrollOverflowOptions: null,
+	touchSensitivity: 15,
+	bigSectionsDestination: null
+
+	
 });
 
 //methods

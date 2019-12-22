@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Сочные бургеры</title>
-  <link rel="stylesheet" href="./css/plugins/jquery.bxslider.css">
+  <!-- <link rel="stylesheet" href="./css/plugins/jquery.bxslider.css"> -->
   <link rel="stylesheet" href="./css/plugins/fullpage.css">
 
-  <!-- <link rel="stylesheet" href="./css/plugins/onepage-scroll.css"> -->
 
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -27,28 +26,29 @@
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a href="#" class="nav__link">О нас</a>
+                    <a href="#section-best" class="nav__link">О нас</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Бургеры</a>
+                    <a href="#section-burgers" class="nav__link">Бургеры</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#section3" class="nav__link">Команда</a>
+                    <a href="#section-team" class="nav__link">Команда</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Меню</a>
+                    <a href="#section-menu" class="nav__link">Меню</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Отзывы</a>
+                    <a href="#section-reviews" class="nav__link">Отзывы</a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Как мы работаем </a>
+                    <a href="#section-wework" class="nav__link">Как мы работаем </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">Контакты</a>
+                    <a href="#section-contacts" class="nav__link">Контакты</a>
                   </li>
                   <li class="nav__order">
-                    <button type="submit" class="btn form__button">Заказать</button>
+                    <!-- <button type="submit" class="btn form__button">Заказать</button> -->
+                    <a href="#section-order" class="btn form__button">Заказать</a>
                   </li>
                   <li class="nav__order">
                     <div class="nav__ham-menu">
@@ -86,7 +86,7 @@
         </div>
       </section>
 
-      <section class="section best" id="section-best">
+      <section class="section best" data-anchor="section-best">
         <div class="container best__container">
           <div class="best__content">
             <h1 class="title title--color--black title--centered best__title">
@@ -153,7 +153,7 @@
         </div>
       </section>
 
-      <section class="section burgers" id="section-burgers">
+      <section class="section burgers" data-anchor="section-burgers">
         <div class="container slider__container">
           <div class="slider__scroll" id="left">
             <div class="slider__btn arrow--left"></div>
@@ -168,6 +168,65 @@
                     <use xlink:href="./img/icons/slider.svg#burger"></use>
                   </svg>
                   <div class="slider__consist-name">Состав</div>
+                </div>
+                <div class="slider__consist-hover">
+                  <ul class="slider__consist-list">
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#beef"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Говядина</div>
+                        <div class="slider__consist-weight">300 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#buns"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Булочки</div>
+                        <div class="slider__consist-weight">100 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#salad"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Зелень</div>
+                        <div class="slider__consist-weight">70 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#sauce"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Соус</div>
+                        <div class="slider__consist-weight">150 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#cucumber"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Овощи</div>
+                        <div class="slider__consist-weight">200 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#cheese"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Сыр</div>
+                        <div class="slider__consist-weight">80 г</div>
+                      </div>
+                    </li>
+                  </ul>
+
                 </div>
                 <div class="slider__energy">
                   <div class="slider__energy-value">1200</div>
@@ -187,7 +246,7 @@
                 <div class="slider__price">
                   <div class="slider__price-value">500</div>
                   <div class="slider__price-currency">рублей</div>
-                  <button type="submit" class="btn slider__button">Заказать</button>
+                  <button type="submit" class="btn form__button">Заказать</button>
                 </div>
               </div>
             </div>
@@ -199,6 +258,65 @@
                     <use xlink:href="./img/icons/slider.svg#burger"></use>
                   </svg>
                   <div class="slider__consist-name">Состав</div>
+                </div>
+                <div class="slider__consist-hover">
+                  <ul class="slider__consist-list">
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#beef"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Говядина</div>
+                        <div class="slider__consist-weight">300 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#buns"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Булочки</div>
+                        <div class="slider__consist-weight">100 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#salad"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Зелень</div>
+                        <div class="slider__consist-weight">70 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#sauce"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Соус</div>
+                        <div class="slider__consist-weight">150 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#cucumber"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Овощи</div>
+                        <div class="slider__consist-weight">200 г</div>
+                      </div>
+                    </li>
+                    <li class="slider__consist-item">
+                      <svg class="slider__consist-svg">
+                        <use xlink:href="./img/icons/slider.svg#cheese"></use>
+                      </svg>
+                      <div class="slider__consist-ingridient">
+                        <div class="slider__consist-ingname">Сыр</div>
+                        <div class="slider__consist-weight">80 г</div>
+                      </div>
+                    </li>
+                  </ul>
+
                 </div>
                 <div class="slider__energy">
                   <div class="slider__energy-value">1200</div>
@@ -218,7 +336,7 @@
                 <div class="slider__price">
                   <div class="slider__price-value">500</div>
                   <div class="slider__price-currency">рублей</div>
-                  <button type="submit" class="btn slider__button">Заказать</button>
+                  <button type="submit" class="btn form__button">Заказать</button>
                 </div>
               </div>
             </div>
@@ -233,7 +351,7 @@
 
       </section>
 
-      <section class="section team" id="section-team">
+      <section class="section team" data-anchor="section-team">
         <div class="team__section">
           <div class="title title--color--yellow title--centered team__title">Команда</div>
           <ul class="team-acco">
@@ -292,7 +410,7 @@
 
       </section>
 
-      <section class="section menu" id="section-menu">
+      <section class="section menu" data-anchor="section-menu">
         <div class="title title--color--white menu__title">Меню</div>
         <ul class="menu-acco">
           <li class="menu-acco__item"><a class="menu-acco__trigger" href="#"
@@ -349,9 +467,7 @@
         </ul>
       </section>
 
-
-
-      <section class="section reviews" id="section-reviews">
+      <section class="section reviews" data-anchor="section-reviews">
         <ul class="reviews__list">
           <li class="reviews__item">
             <img class="reviews__photo" src="./img/reviews/1.png" alt="Фото поедателя">
@@ -467,26 +583,46 @@
         </div>
       </section>
 
-      <section class="section video" id="section-video">
+      <section class="section video" data-anchor="section-wework">
         <div class="container">
           <div class="title title--color--black title--centered">Как мы работаем </div>
-          <div>
-            <video src="./video/videoplayback.mp4" width="480" height="270" poster="./img/content/burger.png" controls>
-              <!-- <video id="myvideo" width="480" height="270" poster="./img/content/burger.png" >
-                <source src="./video/videoplayback.mp4" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-            </video> -->
+          <div class="video__container">
+            <div class="player">
+              <div class="video__file">                
+              </div>
+              <video id="myvideo" src="./video/videoplayback.mp4" class="video__image" poster="./img/content/burger.png"
+              ></video>
+              <div class="player__controls" id="controls">
+                <button class="player__start" id="playpause"></button>
+              <div class="player__playback">
+                <button id="current" class="player__playback-button"></button>
+              </div>
+
+              <button class="player__volume-img" id="">
+                <svg class="player__volume-svg">
+                  <use xlink:href="./img/icons/volume.svg#volume"></use>
+                </svg>
+              </button>
+              <div class="player__volume">
+                <button id="currentVol" class="player__volume-button"></button>
+              </div>
+              <!-- <div class="player__duration">
+                <span class="player__duration-completed">0:00</span> :
+                <span class="player__duration-estimate">0:00</span>
+              </div> -->
+
+              </div>
+
+            </div>
+
           </div>
-          <!-- <div id="controls">
-            <span id="playpause" class="paused" >Play</span>
-          </div> -->
 
-
-
+          
         </div>
-
+        
       </section>
 
-      <section class="section order" id="section-order">
+      <section class="section order" data-anchor="section-order">
         <div class="container">
           <div class="title title--centered">Закажите доставку</div>
           <div class="order__form">
@@ -596,8 +732,7 @@
 
       </section>
 
-      <section class="section" id="section-contacts">
-        <!-- <div id="map" style="width: 600px; height: 400px"></div> -->
+      <section class="section" data-anchor="section-contacts">
         <div class="map__container">
           <div id="map" class="map__yandex"></div>
   
@@ -687,7 +822,7 @@
         <a href="#section-reviews" class="fullscreen-menu-nav__link">Отзывы</a>
       </li>
       <li class="fullscreen-menu-nav__item">
-        <a href="#section-order" class="fullscreen-menu-nav__link">Как мы работаем </a>
+        <a href="#section-wework" class="fullscreen-menu-nav__link">Как мы работаем </a>
       </li>
       <li class="fullscreen-menu-nav__item">
         <a href="#section-contacts" class="fullscreen-menu-nav__link">Контакты</a>
@@ -707,13 +842,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 
-  <script src="./js/jquery.bxslider.js"></script>
-  <!-- <script src="./js/jquery.onepage-scroll.js"></script> -->
+  <!-- <script src="./js/jquery.bxslider.js"></script>
 
-  <script defer src="./js/slider.js"></script>
-  <!-- <script defer src="./js/opsstart.js"></script> -->
-
-  <!-- <script defer src="./js/slider.js"></script> -->
+  <script defer src="./js/slider.js"></script> -->
 
   <script src="./js/fullpage.js"></script>
 

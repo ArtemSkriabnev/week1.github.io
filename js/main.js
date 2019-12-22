@@ -271,3 +271,74 @@ var placemarks = [
 
 
   // $(".main").onepage_scroll();
+
+  // VIDEOPLAYER START
+  $(document).ready(function(){
+    var controls = {
+        video: $("#myvideo"),
+        playpause: $("#playpause"),
+        
+                      
+    };
+    console.log(playpause)              
+    var video = controls.video[0];
+
+    video.volume = 0.5;
+               
+    controls.playpause.click(function(){
+        if (video.paused) {
+            video.play();
+            // $(this).text("Pause");    
+        } else {
+            video.pause();
+            // $(this).text("Play");
+        }
+                
+        $(this).toggleClass("paused"); 
+    });
+
+    video.addEventListener("ended", function() {
+      video.pause();
+      // controls.playpause.text("Play");
+      controls.playpause.toggleClass("paused");
+    });
+
+    video.addEventListener("timeupdate", function() {
+      var progress = (Math.floor(video.currentTime) / Math.floor(video.duration))*100;
+      $(".player__playback-button").css({
+        left: `${progress}%`
+      });
+
+      $(".player__playback").on("click", e => {
+        const bar = $(e.currentTarget);
+        const newButtonPosition = e.pageX - bar.offset().left;
+        const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
+        const newPlayerTimeSec = ( Math.floor(video.duration) / 100) * buttonPosPercent;
+        console.log(newPlayerTimeSec);
+    
+        $(".player__playback-button").css({
+          left: `${buttonPosPercent}%`
+        });
+
+        video.currentTime = newPlayerTimeSec;
+    
+        // player.seekTo(newPlayerTimeSec);
+      }); 
+
+    });
+
+    $(".player__volume").on("click", e => {
+      const bar = $(e.currentTarget);
+      const newButtonVolPosition = e.pageX - bar.offset().left;
+      const buttonVolPos = (newButtonVolPosition / bar.width());
+      // const newPlayerTimeSec = ( Math.floor(video.duration) / 100) * buttonPosPercent;
+      console.log(buttonVolPos);
+  
+      $(".player__volume-button").css({
+        left: `${buttonVolPos * 100}%`
+      });
+
+      video.volume = buttonVolPos;
+    }); 
+}); 
+  // VIDEOPLAYER END

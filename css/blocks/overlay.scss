@@ -1,5 +1,6 @@
 .reviews__popup {
   display: none;
+  // position: relative;
   // opacity: 0.5; 
 }
 
@@ -13,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   padding-top: 10px;
   top: 0;
   bottom: 0;
@@ -35,6 +36,7 @@
   opacity: 1;
   max-width: 50%;
   position: relative;
+  padding: rem(10px);
   // max-height: 200px;
   // z-index: 10000;
 }

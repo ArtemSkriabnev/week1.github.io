@@ -6,6 +6,7 @@
 .slider__container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   @include tablets {
     // flex-direction: column;
     // max-width: 80%;
@@ -118,6 +119,72 @@
       padding: rem(10px) rem(16px);
     }
   }
+
+  .slider__consist:hover ~ .slider__consist-hover {
+    // display: flex;
+    opacity: 0.9;
+    transition: opacity 1s;
+  }
+
+  .slider__consist-hover {
+    position: absolute;
+    display: flex;
+    left: rem(90px);
+    top:0;    
+    background-color: $white;
+    opacity: 0;
+    transition: opacity 1s;
+    
+  }
+
+  .slider__consist-item {
+    display: flex;
+    flex-direction: row;
+    width: rem(230px);
+
+    @include phones {
+      width: (160px);
+    }
+
+    margin-top: rem(15px);
+    &:first-child {
+      margin-top: 0;
+    }
+
+
+  }
+  .slider__consist-svg  {
+    width: rem(44px);
+    height: rem(40px);
+  }
+
+  .slider__consist {
+    &-list {
+      padding: 20px;
+    }
+    &-ingridient {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex: 1;
+      align-items: center;
+      margin-left: rem(23px);
+      @include phones {
+        margin-left: rem(10px);
+      }
+      // width: 100%;
+    }
+    &-ingname{
+      @include ubuntu(medium);
+      font-size: rem(14px);
+    }
+    &-weight{
+      @include ubuntu(light);
+      font-size: rem(14px);
+    }
+  }
+
+
 
   .slider__energy {
     position: absolute;

@@ -43,10 +43,10 @@
 	@if $style == light {
 		font-weight: 300;
 	}
-
+ 
 	@if $style == medium {
 		font-weight: 500;
-	}
+	} 
 
 	@if $style == bold {
 		font-weight: bold;
