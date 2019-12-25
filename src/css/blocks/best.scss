@@ -1,0 +1,106 @@
+.best {
+  background-image: url("../img/bg/best.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.best__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best__content {
+  padding-left: rem(10px);
+  padding-right: rem(10px);
+  
+}
+
+// .best__content {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .best__title {
+//   margin-left: rem(20px);
+// }
+
+.best__list {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: rem(55px);
+
+  @include phones {
+		flex-direction: column; 
+	}
+
+}
+
+.best__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 20px);
+  margin-top: rem(0px);
+  margin-bottom: rem(18px);
+  margin-right: rem(10px);
+
+  @include phones {
+    flex-direction: row; 
+    width: 100%;
+    align-items: flex-start;
+	}
+}
+
+.best__logo{
+  // min-height: rem(97px);
+  // margin-bottom: rem(18px);
+}
+
+.best__desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.best__item-title {
+  @include lifehack();
+  font-size: rem(24px);
+  letter-spacing: rem(-0.6px); 
+  line-height: rem(28.14px);
+  color: $black;
+  text-align: center;
+  margin-bottom: rem(15px);
+}
+
+
+.best__text {
+  @include ubuntu();
+  color: $black;
+  font-size: rem(14px);
+  line-height: rem(24.02px);
+  text-align: center;
+
+  @include phones {
+		text-align: left;
+	}
+}
+
+.best__svg-logo {
+  width: rem(95px);
+  height: rem(90px);
+
+  @include phones {
+    width: 30%;
+    margin-right: rem(10px);
+	}
+
+  
+}
+
+
+
+

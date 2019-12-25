@@ -1,0 +1,105 @@
+.menu-acco {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	// background-color:blue; 
+	// background: rgba(#2f3234, .93); 
+	// background-color: #fff;
+	// @extend %clearfix;
+}
+
+.menu-acco__item {
+	display: flex;
+	flex-direction: row;
+	// float: left;
+	height: 100%;
+	// background: rgba(#2f3234, .93);
+
+	&--active {
+		.menu-acco__trigger-text {
+			color: $yellow; 
+		}
+		.menu-acco__content {
+			display: block;
+			max-width: rem(300px);
+		}
+	}
+}
+
+.menu-acco__trigger {
+	width: rem(80px);
+	display: block;
+	height: 100%;
+	float: left;
+	background-size: cover;
+	// @include cover;
+	text-decoration: none;
+	position: relative;
+	// background-color:blue;
+  
+  @include phones {
+    width: rem(50px);
+  }
+}
+
+.menu-acco__trigger:before{
+	content: "";
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+// .menu-acco__item:after  {
+// 	width: 100%;
+// 	height: 100%;
+// 	background: rgba(#2f3234, .93); 
+	
+// }
+
+.menu-acco__trigger-text {
+	font-size: rem(40px);
+	color: $white;
+	@include gagalin;
+	text-align: center;
+	white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+	margin-top: rem(-20px);
+
+	// background: rgba(#2f3234, .93);
+
+  @include phones {
+    font-size: rem(26px);
+  }
+}
+
+.menu-acco__content {
+	display: none;
+	height: 100%;
+	// float: left;
+	background: rgba(#2f3234, .93);
+	// width: 0;
+	overflow: hidden;
+}
+
+.menu-acco__text {
+	@include ubuntu(light);
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+  // display: none;
+
+  // @include phones {
+  //   padding: rem(25px) rem(15px);
+  // }
+}

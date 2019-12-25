@@ -1,0 +1,193 @@
+.order {
+  background-image: url("../img/bg/order.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.9);
+
+}
+.order__form {
+  display: flex;
+  justify-content: center;
+}
+.order__form-base {
+  display: flex;
+  width: 90%;
+  // justify-content: space-between;
+
+  @include tablets {
+		flex-direction: column; 
+	}
+}
+
+.order__form-col {
+  display: flex;
+  flex-direction: column; 
+  width: 100%;
+}
+
+.form__row {
+  display: flex;
+
+  &-centered {
+    @include phones {
+      // display: flex;
+      justify-content: center;
+    }
+  }
+
+  
+}
+
+.form__label {
+  width: 100%;
+  margin-left: rem(10px);
+
+  @include phones {
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+  &-ghost {
+    @include phones {
+      display: none;
+    }
+  }
+
+  &-centered {
+    @include phones {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+
+}
+
+.form__label__title {
+  color: $white;
+  font-family: Ubuntu;
+  font-size: rem(14px);
+  font-weight: 300;
+  padding-bottom: rem(7px);
+  }
+
+.form__input {
+  border-radius: rem(4px);
+  border: rem(1px) solid transparent;
+   
+  padding: rem(11px) rem(21px);
+  margin-bottom: rem(20px);
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border-color: $orange;
+  }
+
+}
+
+.form__textarea {
+  resize: none;
+  min-height: rem(110px); 
+
+}
+
+.form__label-radio {
+  display: flex;
+}
+
+
+
+.form__question {
+  display: flex;
+  margin-right: rem(10px);
+}
+
+.form__input-radio {
+  display: none;
+}
+
+.form__radio {
+  width: rem(16px);
+  height: rem(16px);
+  border-radius: 50%;
+  background: $white;
+  // @include inlineblock(middle);
+  position: relative;
+  margin-right: rem(10px);
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(0px);
+    height: rem(0px);
+    border-radius: 50%;
+    background: $red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+  }
+}
+
+.form__question input:checked {
+  &+.form__radio {
+    &:after {
+      width: rem(8px);
+      height: rem(8px);
+    }
+  }
+}
+
+.form__question-call{
+  display: flex;
+}
+
+.form__input-checkbox {
+  display: none; 
+}
+
+.form__checkbox {
+  width: rem(16px);
+  height: rem(16px);
+  background: $white;
+  position: relative;
+  margin-right: rem(10px); 
+  &:after {
+    content: "";
+    display: none;
+    width: rem(8px);
+    height: rem(4px);
+    position: absolute;
+    border-radius: rem(2px);
+    left: rem(2px);
+    top: rem(3px);
+    border-left: rem(4px) solid $orange;
+    border-bottom: rem(4px) solid $orange;
+    transform: rotate(-45deg);
+  }
+}
+
+.form__question-call input:checked {
+  &+.form__checkbox {
+    &:after {
+      display: block;
+      // width: rem(8px);
+      // height: rem(8px);
+    }
+  }
+}
+
+.form__button {
+  margin-left: rem(10px);
+}
+
+.form__button--clear {
+  padding: rem(11px) rem(15px); 
+  text-decoration: none;
+  color: $white;
+  font-size: rem(13px);
+}
